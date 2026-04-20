@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <ul>
         <Link href={"/"}>HOME</Link>
-        <Link href={"/products/id/page.js"}>PRODUCTS</Link>
+        <Link href={"/products/page.js"}>PRODUCTS</Link>
       </ul>
 
       <div className="footer-bottom">
