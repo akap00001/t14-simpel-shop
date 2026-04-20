@@ -9,7 +9,7 @@ export default function Home() {
           <h2>Have you seen this Pot?</h2>
           <h3>Not just your average potted plant. The best kind, of course.</h3>
         </div>
-        <div className="placeholder"></div>
+        {/* <div className="placeholder"></div> */}
         {/* <Image src={"https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp"} alt="img" width={700} height={700} className="Home-img" /> */}
         <div>
           <button className="shop-button">SHOP NOW</button>
