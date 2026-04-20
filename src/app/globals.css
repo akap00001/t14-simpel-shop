@@ -24,3 +24,160 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* HEADER */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #eeefe9;
+  padding: 10px 40px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+ul {
+  display: flex;
+  gap: 69px;
+}
+
+li {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cart-space {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+/* FOOTER */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  background: #eeefe9;
+  padding: 10px 40px;
+  border-top: 1px solid black;
+}
+
+footer > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 15px;
+  font-weight: 500;
+
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  grid-column: span 4;
+  grid-row: 2/3;
+}
+
+.footer-bottom > div {
+  display: flex;
+  gap: 20px;
+
+  font-size: 13px;
+  font-weight: 500;
+  color: #93a1a4;
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #93a1a4;
+}
+
+/* HOME */
+
+.home-main {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.home-color {
+  background: linear-gradient(#93a1a4 20%, #eeefe9 80%);
+  display: grid;
+}
+
+.home-color > div > h2 {
+  font-size: 32px;
+  font-weight: 700;
+  padding: 40px 40px 0px;
+}
+.home-color > div > h3 {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0px 40px;
+}
+
+.placeholder {
+  width: 420;
+  height: 420;
+  background: #983a3a;
+  place-self: center;
+}
+
+.shop-button {
+  background: black;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.shop-button:hover {
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+div:has(.shop-button) {
+  margin-left: 40px;
+  padding-bottom: 50px;
+}
+
+.home-beige {
+  background: #ededed;
+  display: grid;
+  place-items: center;
+}
+
+.home-beige > div {
+  display: grid;
+  place-items: center;
+}
+
+.home-beige > div > * {
+  grid-area: 1 / 1;
+}
+
+.home-beige > div > h1 {
+  font-size: 60px;
+  font-weight: 900;
+
+  display: grid;
+  place-content: center;
+  z-index: 2;
+}
+
+.home-beige > div > img,
+.home-beige > div > svg {
+  z-index: 1;
+}
