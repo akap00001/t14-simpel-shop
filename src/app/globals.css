@@ -67,3 +67,8 @@ h1{
  
 }
 
+.Filtering-grid {
+ margin: 5%;
+  display: flex;   
+  gap: 20px;       
+}
