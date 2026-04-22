@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { MdArrowForwardIos } from "react-icons/md";
+import AddToCart from "@/components/AddToCart";
 
 
 
 
+const TheProducts = ({ title, price, image, discountPercentage,  id }) => {
 
-const TheProducts = ({ title, price, image, discountPercentage }) => {
   return (
     <div>
       <Image
@@ -31,3 +32,10 @@ const TheProducts = ({ title, price, image, discountPercentage }) => {
 };
 
 export default TheProducts;
+
+{
+  /* <AddToCart  id={product.id}
+  title={product.title}
+  price={product.price}
+  image={product.image} />; */
+}
