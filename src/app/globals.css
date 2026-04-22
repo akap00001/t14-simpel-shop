@@ -60,6 +60,10 @@ h1 {
   margin-left: 50%;
 }
 
+.Filtering-grid {
+ margin: 5%;
+  display: flex;   
+  gap: 20px;       
 /* HEADER */
 
 nav {

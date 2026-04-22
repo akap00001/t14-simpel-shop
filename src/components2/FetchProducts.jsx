@@ -1,34 +1,45 @@
+
+"use client";
+import { useState, useEffect } from "react";
 import TheProducts from "./TheProducts";
-import AddToCart from "@/components/AddToCart";
 
-const FetchProducts = () => {
+const FetchProducts = ({ activeFilter }) => {
+  const [products, setProducts] = useState([]);
+
+
+    const fetchData = async () => {
+      const res1 = await fetch(
+        "https://dummyjson.com/products/category/furniture",
+      );
+      const res2 = await fetch(
+        "https://dummyjson.com/products/category/home-decoration",
+      );
+      const data1 = await res1.json();
+      const data2 = await res2.json();
+      setProducts([...data1.products, ...data2.products]);
+    };
+     useEffect(() => {
+    fetchData();
+  }, []);
+
+  const filtered = products.filter((product) => {
+    if (activeFilter === "All") return true;
+    if (activeFilter === "Furniture") return product.category === "furniture";
+    if (activeFilter === "Home") return product.category === "home-decoration";
+  });
+
   return (
-    <div>
-      <MyProducts />
-    </div>
-  );
-};
-
-const MyProducts = async () => {
-  "use server";
-
-  const url1 = "https://dummyjson.com/products/category/furniture";
-  const url2 = "https://dummyjson.com/products/category/home-decoration";
-
-  const res1 = await fetch(url1);
-  const res2 = await fetch(url2);
-
-  const data1 = await res1.json();
-  const data2 = await res2.json();
-
-  const allProducts = [...data1.products, ...data2.products];
-
-  return (
-    <div className="grid">
-      {allProducts.map((product) => (
-        <TheProducts key={product.id} title={product.title} price={product.price} discountPercentage={product.discountPercentage} image={product.images[0]} />
+    <article className="grid">
+      {filtered.map((product) => (
+        <TheProducts
+          key={product.id}
+          title={product.title}
+          price={product.price}
+          discountPercentage={product.discountPercentage}
+          image={product.images[0]}
+        />
       ))}
-    </div>
+    </article>
   );
 };
 
