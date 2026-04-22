@@ -5,6 +5,7 @@ export default function Payment() {
   return (
     <main className="payment-main">
       <h1>CART</h1>
+
       <div>
         <section>
           <h4>Products</h4>
@@ -26,12 +27,15 @@ export default function Payment() {
             </span>
           </div>
 
-          <div>
-            <p className="checkout">CHECKOUT</p>
-            <p>USD $ 750</p>
+          <div className="checkout-bottom">
+            <div>
+              <p className="checkout">Checkout ›</p>
+              <p>USD $ 750</p>
+            </div>
           </div>
         </section>
       </div>
+
       <div className="payment-links">
         <Link href={"/products/id/page.js"}>‹ Go Back</Link>
         <Link href={"/products/page.js"}>Add More Products ›</Link>

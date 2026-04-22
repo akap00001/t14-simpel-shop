@@ -2,6 +2,7 @@
 import useCartStore from "@/store/cart";
 import Image from "next/image";
 import RemoveFromCart from "./RemoveFromCart";
+import { GoTriangleDown } from "react-icons/go";
 
 const InCart = () => {
   const cart = useCartStore((state) => state.cart);
@@ -11,24 +12,27 @@ const InCart = () => {
       {cart.map((item) => (
         <article key={item.id} className="payment-product">
           <div className="product-info">
-            {/* Husk at tilføje billede og pris */}
             <Image src={item.image} alt="img" width={200} height={200} className="payment-img" />
 
             <div>
               <h3>{item.title}</h3>
-              <p>CATEGORY: HOME-DECORATION</p>
-              <p className="light">IN STOCK</p>
+              <p className="category">CATEGORY: HOME-DECORATION</p>
+              <span>
+                <p>IN STOCK</p>
+              </span>
             </div>
           </div>
 
           <div className="details">
             <div>
               <span>Quantity</span>
-              <p>1 ▼</p>
+              <p className="quantity">
+                1 <GoTriangleDown />
+              </p>
             </div>
             <div>
               <span>Price</span>
-              <p>$19.99</p>
+              <p>{item.price}</p>
             </div>
             <RemoveFromCart id={item.id} />
           </div>

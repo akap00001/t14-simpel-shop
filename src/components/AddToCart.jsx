@@ -21,5 +21,3 @@ const AddToCart = ({ id, title, price, image }) => {
 };
 
 export default AddToCart;
-
-// price, image
