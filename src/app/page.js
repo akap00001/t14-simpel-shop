@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import AddToCart from "@/components/AddToCart";
 
-export default function Home() {
+export default function Home(product) {
   return (
     <main className="home-main">
       {/* <AddToCart id={product.id} title={product.title} price={product.price} image={product.image} /> */}
