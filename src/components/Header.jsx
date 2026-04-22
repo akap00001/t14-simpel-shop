@@ -13,7 +13,7 @@ const Header = () => {
           <Link href={"/products/page.js"}>PRODUCTS</Link>
         </li>
         <li className="cart-space">
-          <Link href={"/payment/page.js"} className="cart-space">
+          <Link href={"/payment"} className="cart-space">
             CART | <BsBagFill />
           </Link>
         </li>

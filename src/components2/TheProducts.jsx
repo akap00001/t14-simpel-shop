@@ -1,6 +1,7 @@
 import Image from "next/image";
+import AddToCart from "@/components/AddToCart";
 
-const TheProducts = ({ title, price, image }) => {
+const TheProducts = ({ title, price, image, id }) => {
   return (
     <div>
       <h1>{title}</h1>
@@ -11,3 +12,10 @@ const TheProducts = ({ title, price, image }) => {
 };
 
 export default TheProducts;
+
+{
+  /* <AddToCart  id={product.id}
+  title={product.title}
+  price={product.price}
+  image={product.image} />; */
+}
