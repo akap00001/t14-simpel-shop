@@ -33,9 +33,4 @@ const TheProducts = ({ title, price, image, discountPercentage,  id }) => {
 
 export default TheProducts;
 
-{
-  /* <AddToCart  id={product.id}
-  title={product.title}
-  price={product.price}
-  image={product.image} />; */
-}
+
