@@ -17,6 +17,6 @@ const useCartStore = create(
       set((state) => ({
         cart: state.cart.filter((item) => item.id !== Number(id)),
       })),
-  })),
+  }))
 );
 export default useCartStore;
