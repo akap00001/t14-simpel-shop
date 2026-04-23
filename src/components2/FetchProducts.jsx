@@ -2,6 +2,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import TheProducts from "./TheProducts";
+import Link from "next/link";
 
 const FetchProducts = ({ activeFilter }) => {
   const [products, setProducts] = useState([]);
@@ -31,13 +32,14 @@ const FetchProducts = ({ activeFilter }) => {
   return (
     <article className="grid">
       {filtered.map((product) => (
-        <TheProducts
-          key={product.id}
-          title={product.title}
-          price={product.price}
-          discountPercentage={product.discountPercentage}
-          image={product.images[0]}
-        />
+        <Link href={`/products/${product.id}`} key={product.id}>
+          <TheProducts
+            title={product.title}
+            price={product.price}
+            discountPercentage={product.discountPercentage}
+            image={product.images[0]}
+          />
+        </Link>
       ))}
     </article>
   );

@@ -1,18 +1,23 @@
-"use client";
-import { useState } from "react";
-import FilteringCard from "@/components2/FilteringCard";
-import FetchProducts from "@/components2/FetchProducts";
+import Image from "next/image";
 
-export default function Page() {
-  const [activeFilter, setActiveFilter] = useState("All");
-
+const ProductPage = async ({ params }) => {
+  const { id } = await params;
+  const res = await fetch(`https://dummyjson.com/products/${id}`);
+  const product = await res.json();
+  console.log(product); 
   return (
     <div>
-      <FilteringCard
-        setActiveFilter={setActiveFilter}
-        activeFilter={activeFilter}
+      <h1>{product.title}</h1>
+      <Image
+        src={product.thumbnail}
+        alt={product.title}
+        width={400}
+        height={400}
       />
-      <FetchProducts activeFilter={activeFilter} />
+      <p>{product.price} $</p>
+      <p>{product.description}</p>
     </div>
   );
-}
+};
+
+export default ProductPage;

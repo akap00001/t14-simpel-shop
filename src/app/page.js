@@ -16,7 +16,7 @@ export default function Home(product) {
 
         <Image src={"https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/1.webp"} alt="img" width={650} height={650} className="Home-img" />
 
-        <Link href={"/products/page.js"} className="shop-button">
+        <Link href={"/products"} className="shop-button">
           SHOP NOW
         </Link>
       </section>
