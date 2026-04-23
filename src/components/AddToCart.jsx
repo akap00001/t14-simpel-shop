@@ -6,11 +6,14 @@ const AddToCart = ({ id, title, price, image }) => {
   //   if (cart.some((item) => item.id === id)) {
   //   const cart = useCartStore((state) => state.cart);
   const setCartStore = useCartStore((state) => state.setCartStore);
+ 
+  
   return (
     <div>
       <button
         className="add"
         onClick={() => {
+    
           setCartStore(id, title, price, image);
         }}
       >

@@ -7,12 +7,15 @@ const useCartStore = create(
 
     setCartStore: (id, title, price, image) =>
       set((state) => ({
-        cart: [...state.cart, { id: id, title: title, price: price, image: image }],
+        cart: [
+          ...state.cart,
+          { id: id, title: title, price: price, image: image },
+        ],
       })),
 
     removeCartStore: (id) =>
       set((state) => ({
-        cart: state.cart.filter((item) => item.id !== id),
+        cart: state.cart.filter((item) => item.id !== Number(id)),
       })),
   })),
 );

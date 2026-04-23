@@ -10,14 +10,14 @@ export default function Page() {
 
   return (
     <div>
-      <FilteringCard
-        setActiveFilter={setActiveFilter}
-        activeFilter={activeFilter}
-      />
-      <FetchProducts activeFilter={activeFilter} />
-
+    
+      
+        <FilteringCard
+          setActiveFilter={setActiveFilter}
+          activeFilter={activeFilter}
+        />
+        <FetchProducts activeFilter={activeFilter} />
      
-
     </div>
   );
 }

@@ -30,6 +30,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3%;
   margin-left: 10%;
+  margin-bottom: 10%;
 }
 
 .border {
@@ -56,15 +57,20 @@ h1 {
   text-decoration: underline;
 }
 
-.arrow {
+.arrow  {
   margin-left: 50%;
+  
 }
 
+
 .Filtering-grid {
- margin: 5%;
+  margin: 2%;
+ margin-left: 5%;
   display: flex;   
-  gap: 20px;    
+  gap: 20px;  
+  
 }   
+
 /* HEADER */
 
 nav {
@@ -369,3 +375,29 @@ span {
   border-top: 1px solid black;
   padding-top: 10px;
 }
+
+
+/**id edit*********/
+
+.id-grid{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ margin: 5% auto;
+
+ width: 80%;
+}
+
+.id-grid img{
+  background-image: transparent;
+  background-color: #EEEFE9
+}
+
+.id-grid h1{
+  font-weight: 700;
+  font-size: 30px;
+  width: 80%;
+}
+
+
+
+/*******/
