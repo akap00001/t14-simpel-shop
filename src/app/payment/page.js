@@ -38,7 +38,7 @@ export default function Payment() {
 
       <div className="payment-links">
         <Link href={"/products/id/page.js"}>‹ Go Back</Link>
-        <Link href={"/products/page.js"}>Add More Products ›</Link>
+        <Link href={"/products"}>Add More Products ›</Link>
       </div>
     </main>
   );
