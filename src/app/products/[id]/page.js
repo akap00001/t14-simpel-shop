@@ -24,6 +24,7 @@ const ProductPage = async ({ params }) => {
           title={product.title}
           price={product.price}
           image={product.thumbnail}
+        
         />
         <p>{product.description}</p>
       </div>
